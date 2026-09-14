@@ -1,4 +1,3 @@
-// src/screens/HomeScreen.tsx
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { ArrowDownCircle, ArrowUpCircle, FileText, Search, Users } from 'lucide-react-native';
@@ -55,8 +54,12 @@ const HomeScreen = () => {
     ];
 
     return (
-        <SafeAreaView style={styles.container} edges={['top', 'left', 'right', 'bottom']}>
-            <ScrollView style={styles.scroll} contentContainerStyle={styles.scrollContent}>
+        <SafeAreaView style={styles.container} edges={['top', 'left', 'right', 'bottom']} >
+            <ScrollView
+                showsVerticalScrollIndicator={false}
+                style={styles.scroll}
+                contentContainerStyle={styles.scrollContent}
+            >
                 {/* Header Section */}
                 <View style={styles.header}>
                     <View>
@@ -265,9 +268,9 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: colors.surfaceAlt,
+        backgroundColor: colors.analytics,
         borderRadius: radius.card,
-        padding: spacing.md,
+        padding: spacing.sm,
         gap: spacing.xs,
     },
     browseText: {

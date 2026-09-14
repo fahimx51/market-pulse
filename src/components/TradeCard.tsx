@@ -1,3 +1,4 @@
+// src/components/TradeCard.tsx
 import { ArrowDown, ArrowUp } from 'lucide-react-native';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { colors, radius, spacing } from '../theme/colors';
@@ -15,7 +16,15 @@ const TradeCard = ({ trade, onPress }: TradeCardProps) => {
     const arrowColor = isPurchase ? colors.purchase : colors.sale;
 
     return (
-        <TouchableOpacity style={styles.card} onPress={onPress} activeOpacity={0.7}>
+        <TouchableOpacity
+            style={styles.card}
+            onPress={onPress}
+            activeOpacity={0.7}
+            accessibilityRole="button"
+            accessibilityLabel={`${trade.ticker}, ${trade.company}, ${isPurchase ? 'purchase' : 'sale'} of ${formatCurrency(
+                trade.value
+            )} by ${trade.insider}, ${trade.role}`}
+        >
             <View style={[styles.avatar, { backgroundColor: avatarColor(trade.ticker) }]}>
                 <Text style={styles.avatarText}>{trade.ticker.charAt(0)}</Text>
             </View>
@@ -24,6 +33,9 @@ const TradeCard = ({ trade, onPress }: TradeCardProps) => {
                 <Text style={styles.ticker} numberOfLines={1}>{trade.ticker}</Text>
                 <Text style={styles.company} numberOfLines={1} ellipsizeMode="tail">
                     {trade.company}
+                </Text>
+                <Text style={styles.meta} numberOfLines={1} ellipsizeMode="tail">
+                    {trade.insider} ({trade.role})
                 </Text>
             </View>
 
@@ -40,10 +52,6 @@ const TradeCard = ({ trade, onPress }: TradeCardProps) => {
                 </View>
 
                 <Text style={styles.value}>{formatCurrency(trade.value)}</Text>
-
-                <Text style={styles.meta} numberOfLines={1} ellipsizeMode="tail">
-                    {trade.insider} ({trade.role})
-                </Text>
 
                 <View style={styles.bottomRow}>
                     <SignalBadge strength={trade.signalStrength} />
@@ -64,6 +72,7 @@ const styles = StyleSheet.create({
         borderRadius: radius.card,
         padding: spacing.sm,
         gap: 12,
+        // marginBottom: spacing.xs,
     },
     avatar: {
         width: 40,
@@ -89,12 +98,20 @@ const styles = StyleSheet.create({
     },
     company: {
         color: colors.textSecondary,
-        fontSize: 11,
+        fontSize: 12,
+        fontWeight: '500',
         marginTop: 2,
+    },
+    meta: {
+        color: colors.textSecondary,
+        fontSize: 10,
+        marginTop: 2,
+        flexShrink: 1,
     },
     right: {
         alignItems: 'flex-end',
         justifyContent: 'center',
+        flexShrink: 0,
     },
     typeRow: {
         flexDirection: 'row',
@@ -110,12 +127,6 @@ const styles = StyleSheet.create({
         fontSize: 13,
         fontWeight: '600',
         marginTop: 2,
-    },
-    meta: {
-        color: colors.textSecondary,
-        fontSize: 10,
-        marginTop: 2,
-        maxWidth: 140,
     },
     bottomRow: {
         flexDirection: 'row',

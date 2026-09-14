@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from '../screens/HomeScreen';
 import ScreenerScreen from '../screens/ScreenerScreen';
 import TradeDetailsScreen from '../screens/TradeDetailsScreen';
+import { colors } from '../theme/colors';
 
 export type RootStackParamList = {
     Home: undefined;
@@ -15,7 +16,14 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 const AppNavigator = () => {
     return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName="Home">
+            <Stack.Navigator
+                initialRouteName="Home"
+                screenOptions={{
+                    headerStyle: { backgroundColor: colors.surface },
+                    headerTintColor: colors.textPrimary,
+                    headerShadowVisible: false,
+                }}
+            >
                 <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
                 <Stack.Screen name="Screener" component={ScreenerScreen} options={{ title: 'Screener' }} />
                 <Stack.Screen name="Details" component={TradeDetailsScreen} options={{ headerShown: false }} />
