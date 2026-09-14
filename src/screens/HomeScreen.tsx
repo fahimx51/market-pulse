@@ -141,7 +141,7 @@ const HomeScreen = () => {
             <View style={styles.footer}>
                 <TouchableOpacity style={styles.browseButton} onPress={() => navigation.navigate('Screener')}>
                     <Search size={16} color={colors.textPrimary} />
-                    <Text style={styles.browseText}>Browse trades</Text>
+                    <Text style={styles.browseText}>Browse Trades</Text>
                 </TouchableOpacity>
             </View>
         </SafeAreaView>
@@ -164,7 +164,7 @@ const styles = StyleSheet.create({
     header: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        alignItems: 'flex-start',
+        alignItems: 'center',
         marginBottom: spacing.md,
     },
     title: {
@@ -181,7 +181,7 @@ const styles = StyleSheet.create({
         backgroundColor: colors.surfaceAlt,
         paddingHorizontal: spacing.xs,
         paddingVertical: 4,
-        borderRadius: 20,
+        borderRadius: 18,
     },
     badgeText: {
         color: colors.textSecondary,
@@ -268,7 +268,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: colors.analytics,
+        backgroundColor: colors.surface,
         borderRadius: radius.card,
         padding: spacing.sm,
         gap: spacing.xs,

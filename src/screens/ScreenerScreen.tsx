@@ -50,6 +50,8 @@ const ScreenerScreen = () => {
         });
     }, [searchText, typeFilter, roleFilter, valueFilter]);
 
+    // console.log(filteredTrades);
+
     const clearFilters = () => {
         setSearchText('');
         setTypeFilter('All');
@@ -279,7 +281,8 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     listContent: {
-        paddingBottom: spacing.sm,
+        paddingBottom: spacing.md,
+        marginTop: spacing.xs,
     },
     emptyState: {
         alignItems: 'center',
