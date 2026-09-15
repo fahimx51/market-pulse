@@ -56,11 +56,12 @@ I reviewed, tested, and can explain all code and design decisions in this projec
 - Screenshots: https://drive.google.com/drive/folders/1C7yjtMOomMMsmhF9_7ZEbxZnSmk-hgbj?usp=sharing
 
 ## Screenshots
-### Home / Market Pulse
-![Home screen](./assets/screenshots/HomeScreen.jpg)
 
-### Screener
-![Screener screen](./assets/screenshots/ScreenerScreen.jpg)
+### Home Screen
+<img src="./assets/screenshots/HomeScreen.jpg" alt="Home Screen" height="450" />
 
-### Trade Details
-![Trade Details screen](./assets/screenshots/TradeDetailsScreen.jpg)
+### Screener Screen
+<img src="./assets/screenshots/ScreenerScreen.jpg" alt="Screener Screen" height="450" />
+
+### Trade Details Screen
+<img src="./assets/screenshots/TradeDetailsScreen.jpg" alt="Trade Details Screen" height="450" />
