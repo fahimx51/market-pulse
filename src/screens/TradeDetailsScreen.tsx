@@ -79,7 +79,10 @@ const TradeDetailsScreen = () => {
                 </View>
             </View>
 
-            <ScrollView contentContainerStyle={styles.scrollContent}>
+            <ScrollView
+                showsVerticalScrollIndicator={false}
+                contentContainerStyle={styles.scrollContent}
+            >
                 <View style={styles.signalCard}>
 
                     <View style={styles.signalValueRow}>
