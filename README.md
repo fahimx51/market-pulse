@@ -57,11 +57,8 @@ I reviewed, tested, and can explain all code and design decisions in this projec
 
 ## Screenshots
 
-### Home Screen
-<img src="./assets/screenshots/HomeScreen.jpg" alt="Home Screen" height="450" />
-
-### Screener Screen
-<img src="./assets/screenshots/ScreenerScreen.jpg" alt="Screener Screen" height="450" />
-
-### Trade Details Screen
-<img src="./assets/screenshots/TradeDetailsScreen.jpg" alt="Trade Details Screen" height="450" />
+<p align="center">
+  <img src="./assets/screenshots/HomeScreen.jpg" alt="Home Screen" height="550" />
+  <img src="./assets/screenshots/ScreenerScreen.jpg" alt="Screener Screen" height="550" />
+  <img src="./assets/screenshots/TradeDetailsScreen.jpg" alt="Trade Details Screen" height="550" />
+</p>
