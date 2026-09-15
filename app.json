@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "market-pulse",
+    "name": "Market Pulse",
     "slug": "market-pulse",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/icons/icon-removebg.png",
     "scheme": "marketpulse",
     "userInterfaceStyle": "dark",
     "android": {
@@ -15,25 +15,31 @@
         "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.fahim360steam.marketpulse"
     },
     "web": {
       "output": "single",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/icons/icon-removebg.png"
     },
     "plugins": [
       [
         "expo-splash-screen",
         {
           "backgroundColor": "#0B1220",
-          "image": "./assets/images/splash-icon.png",
+          "image": "./assets/icons/icon-removebg.png",
           "imageWidth": 76
         }
       ]
     ],
     "experiments": {
-      "typedRoutes": false,
-      "reactCompiler": true
-    }
+      "typedRoutes": false
+    },
+    "extra": {
+      "eas": {
+        "projectId": "513102b3-27d9-40eb-917b-23a7d5afad18"
+      }
+    },
+    "owner": "fahim360s-team"
   }
 }

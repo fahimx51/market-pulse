@@ -18,7 +18,7 @@ export const formatCurrency = (value: number): string => {
 export const timeAgo = (isoString: string): string => {
     const timestamp = new Date(isoString).getTime();
 
-    // Safety check for invalid date
+    // check for invalid date
     if (isNaN(timestamp)) return 'Recently';
 
     const diffMs = Date.now() - timestamp;

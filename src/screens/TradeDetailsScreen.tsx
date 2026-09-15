@@ -42,7 +42,7 @@ const TradeDetailsScreen = () => {
             label: 'Filed date',
             value: new Date(trade.filedAt).toLocaleString(undefined, {
                 month: 'short',
-                day: 'numeric',
+                day: '2-digit',
                 hour: '2-digit',
                 minute: '2-digit',
             }),
