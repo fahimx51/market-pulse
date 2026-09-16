@@ -48,9 +48,21 @@ const HomeScreen = () => {
     ];
 
     const topSignals = [
-        { icon: <ArrowUpCircle size={14} color={colors.purchase} />, label: 'Large CEO Purchase', count: 6 },
-        { icon: <Users size={14} color={colors.analytics} />, label: 'Cluster Buy', count: 4 },
-        { icon: <ArrowDownCircle size={14} color={colors.sale} />, label: 'Executive Sale', count: 3 },
+        {
+            icon: <ArrowUpCircle size={14} color={colors.purchase} />,
+            label: 'Large CEO Purchase',
+            count: mockTrades.filter((t) => t.signal === 'Large CEO Purchase').length,
+        },
+        {
+            icon: <Users size={14} color={colors.analytics} />,
+            label: 'Cluster Buy',
+            count: mockTrades.filter((t) => t.signal === 'Cluster Buy').length,
+        },
+        {
+            icon: <ArrowDownCircle size={14} color={colors.sale} />,
+            label: 'Executive Sale',
+            count: mockTrades.filter((t) => t.signal === 'Executive Sale').length,
+        },
     ];
 
     return (
