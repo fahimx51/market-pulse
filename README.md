@@ -51,8 +51,8 @@ I used Claude (chat) throughout development for:
 I reviewed, tested, and can explain all code and design decisions in this project.
 
 ## Deliverables
-- APK: https://drive.google.com/file/d/1vP3TFaW3ae8zGuzKXzPGUG6FZKyKxYh3/view?usp=sharing
-- Demo video: https://drive.google.com/drive/folders/1ihqooSM0YTQD3GJ-nRFjOWdRVjBZtsq3?usp=sharing
+- APK: https://drive.google.com/file/d/1-WdjVl4olbOv35xUvTjoztxAAEabGNXT/view?usp=sharing
+- Demo video: https://drive.google.com/file/d/1vkq6t-AVqctbzYMb-2K-PbuugueANUek/view?usp=sharing
 - Screenshots: https://drive.google.com/drive/folders/1C7yjtMOomMMsmhF9_7ZEbxZnSmk-hgbj?usp=sharing
 
 ## Screenshots
